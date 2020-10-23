@@ -78,5 +78,9 @@ else
     echo "Copying DNSMASQ config"
     sudo cp dnsmasq.conf /etc/
 
+    echo "Finalizing HostAPD"
     sudo cp hostapd.conf /etc/hostapd/
+
+    echo "Setting up interfaces"
+    sudo cp interfaces /etc/network/
 fi
