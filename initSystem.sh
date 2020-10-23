@@ -19,6 +19,7 @@ sudo hciconfig hci0 piscan
 echo "Adding proper bluetooth starting services..."
 sudo mkdir /usr/redefined-destruction/
 sudo cp /home/pi/redefined-destruction/Setup/scripts/bluetooth_start.sh /usr/redefined-destruction/
+sudo cp /home/pi/redefined-destruction/Setup/bluetooth_start.service /etc/systemd/system/
 echo "Enabling System Services"
 sudo systemctl enable bluetooth_start.service
 sudo systemctl start bluetooth_start.service
