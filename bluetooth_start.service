@@ -1,0 +1,13 @@
+[Unit]
+Description=Battle Bot Custom Bluetooth Start Code
+After=bluetooth.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=never
+User=root
+ExecStart=/bin/sh /usr/redefined-destruction/bluetooth_start.sh
+
+[Install]
+WantedBy=multi-user.target
