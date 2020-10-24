@@ -73,7 +73,7 @@ else
     fi
 
     echo "Server is setup as $ssid with password $pass"
-    printf "interface=wlan0\nssid=$ssid\nhw_mode=n\nwpa=2\nwpa_passphrase=$pass\nwpa_key_mgmt=WPA-PSK WPA-EAP WPA-PSK-SHA256 WPA-EAP-SHA256\n" > hostapd.conf
+    printf "interface=wlan0\nssid=$ssid\nhw_mode=n\nwpa=2\nwpa_passphrase=$pass\nwpa_key_mgmt=WPA-PSK WPA-EAP WPA-PSK-SHA256 WPA-EAP-SHA256\nchannel=1\n" > hostapd.conf
 
     echo "Copying DNSMASQ config"
     sudo cp dnsmasq.conf /etc/
