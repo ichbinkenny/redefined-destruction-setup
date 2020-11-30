@@ -13,7 +13,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install bluez python3-pip libbluetooth-dev
 
-sudo pip3 install pybluez
+sudo pip3 install pybluez RPi
 sudo apt-get -y install libnfc-dev libnfc-bin libfreefare-dev
 
 # Modifications to allow pybluez to function properly in compatability mode
@@ -32,7 +32,10 @@ sudo cp /home/pi/redefined-destruction/Setup/bluetooth_start.service /etc/system
 echo "Enabling System Services"
 sudo systemctl enable bluetooth_start.service
 sudo systemctl start bluetooth_start.service
-echo "Complete!"
+printf "Please enter the ID number for this device"
+read idNo
+sudo hostnamectl set-hostname "BattleBot${idNo}"
+echo "Complete! Bot is setup with id: ${idNo}"
 
 else
     echo "Installing server software..."
