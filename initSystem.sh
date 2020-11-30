@@ -13,7 +13,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install bluez python3-pip libbluetooth-dev
 
-sudo pip3 install pybluez RPi
+sudo pip3 install pybluez RPi.GPIO wifi
 sudo apt-get -y install libnfc-dev libnfc-bin libfreefare-dev
 
 # Modifications to allow pybluez to function properly in compatability mode
