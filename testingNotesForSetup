@@ -1,0 +1,8 @@
+The following is a collection of notes for the setup script:
+1. Client vs Server detection works!
+2. Only proper packages for the client or server are installed based on selection.
+3. Proper service files are transfered and setup for run on system boot!
+4. Network ID set for server sticks between reboots!
+5. Battle bot ID is visible on the device name via bluetooth!
+
+In short, everything appears to be working as intended!
